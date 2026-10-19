@@ -1,8 +1,8 @@
 {
-  "appId": "ch.duartesantos.opengym",
-  "appName": "openGym",
+  "appId": "com.apex.fitness",
+  "appName": "APEX",
   "webDir": "dist",
-  "backgroundColor": "#0c0e12",
+  "backgroundColor": "#08090d",
   "android": {
     "allowMixedContent": true
   }

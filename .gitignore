@@ -30,3 +30,16 @@ frontend/bundle-size.json
 
 # Local planning notes
 docs/superpowers/plans/
+
+# Mobile build artifacts and keystores
+*.keystore
+*.jks
+*.apk
+*.aab
+*.ipa
+builds/
+icon/
+frontend/android/local.properties
+frontend/android/app/build/
+frontend/icons/
+coach-auth/

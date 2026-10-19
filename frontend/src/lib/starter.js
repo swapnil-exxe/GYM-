@@ -34,13 +34,26 @@ const FIVE_BY_FIVE = [
   ['5x5-c', '5×5 C', 'barbell', [['0739', 5, 5], ['0047', 5, 5], ['1323', 5, 5]]]
 ]
 
+const APEX_VSHAPE = [
+  ['apex-push-a', 'APEX Push A (Chest & Delts)', 'barbell', [['0025', 4, 8], ['0047', 3, 10], ['0426', 3, 10], ['0334', 4, 12], ['0241', 3, 12]]],
+  ['apex-pull-a', 'APEX Pull A (Lats & V-Taper)', 'pullup', [['2330', 4, 8], ['0027', 4, 8], ['1323', 3, 10], ['0031', 3, 12], ['0313', 3, 10]]],
+  ['apex-legs-a', 'APEX Legs A (Quad Focus)', 'legs', [['0043', 4, 8], ['0085', 3, 10], ['0739', 3, 10], ['0585', 3, 12], ['0605', 4, 15]]],
+  ['apex-push-b', 'APEX Push B (Upper Chest & Shoulders)', 'barbell', [['0047', 4, 8], ['0025', 3, 10], ['0334', 4, 12], ['0251', 3, 10], ['0241', 3, 12]]],
+  ['apex-pull-b', 'APEX Pull B (Upper Back & Width)', 'pullup', [['0027', 4, 8], ['2330', 3, 10], ['1323', 3, 10], ['0031', 3, 12], ['0313', 3, 12]]],
+  ['apex-legs-b', 'APEX Legs B (Posterior Chain)', 'legs', [['0085', 4, 8], ['0739', 4, 10], ['0586', 4, 12], ['0605', 4, 15]]]
+]
+
 // [weekday, routineKey] — weekday is a DAYN index, so 1 is Monday. Fixed weeks only: every
 // plan repeats the same seven days, which is all the weekly plan model can represent.
 const PLANS = {
   ppl: { routines: PPL, schedule: [[1, 'push'], [3, 'pull'], [5, 'legs']] },
   'upper-lower': { routines: UPPER_LOWER, schedule: [[1, 'upper-a'], [2, 'lower-a'], [4, 'upper-b'], [5, 'lower-b']] },
   'full-body': { routines: FULL_BODY, schedule: [[1, 'fb-a'], [3, 'fb-b'], [5, 'fb-c']] },
-  '5x5': { routines: FIVE_BY_FIVE, schedule: [[1, '5x5-a'], [3, '5x5-b'], [5, '5x5-c']] }
+  '5x5': { routines: FIVE_BY_FIVE, schedule: [[1, '5x5-a'], [3, '5x5-b'], [5, '5x5-c']] },
+  'apex-vshape': {
+    routines: APEX_VSHAPE,
+    schedule: [[1, 'apex-push-a'], [2, 'apex-pull-a'], [3, 'apex-legs-a'], [4, 'apex-push-b'], [5, 'apex-pull-b'], [6, 'apex-legs-b']]
+  }
 }
 
 const build = routines =>
